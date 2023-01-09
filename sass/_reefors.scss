@@ -1,0 +1,49 @@
+.reefors {
+  background-color: $color-secondary;
+  grid-column: 9 / full-end;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  row-gap: 3rem;
+  justify-items: center;
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start / full-end;
+    grid-row: 3 / 4;
+    padding: 2.5rem 0;
+  }
+
+  .reefor__img {
+    width: 8rem;
+    border-radius: 50px;
+    display: block;
+    @media only screen and (max-width: $bp-medium) {
+      width: 6rem;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    column-gap: 3rem;
+    row-gap: 6vh;
+    align-items: center;
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: min-content max-content;
+    }
+  }
+  &__details {
+    font-family: $font-display;
+
+    h4 {
+      font-weight: 400;
+    }
+  }
+  &__sold {
+    color: $color-grey-light-2;
+    margin-top: -3px;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,36 @@
+.navigation {
+  background-color: $color-secondary;
+  grid-column: full-start / full-end;
+
+  .nav {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 5rem;
+    padding: 2rem 4rem;
+    justify-items: center;
+    align-items: center;
+    @media only screen and (max-width: $bp-medium) {
+      column-gap: 0;
+    }
+    &__logo {
+      height: 4rem;
+    }
+
+    &__link:link,
+    &__link:visited {
+      text-decoration: none;
+      font-size: 1.8rem;
+      color: $color-grey-light-2;
+      cursor: pointer;
+      font-family: $font-display;
+      padding-bottom: 2px;
+      transition: all 0.3s;
+
+      &:hover {
+        border-bottom: 2px solid $color-grey-light-2;
+        color: $color-primary;
+      }
+    }
+  }
+}
